@@ -67,7 +67,7 @@ class Person extends objection.Model {
 
     properties: {
       firstName: {
-        type: 'string',
+        type: 'string'
       }
     }
   };
@@ -505,6 +505,7 @@ qb = qb.select('column1');
 qb = qb.select('column1', 'column2', 'column3');
 qb = qb.select(['column1', 'column2']);
 qb = qb.forUpdate();
+qb = qb.forUpdate().skipLocked();
 qb = qb.as('column_name');
 qb = qb.column('column_name');
 qb = qb.columns('column_name', 'column_name_2');
